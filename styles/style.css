@@ -1,12 +1,9 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .link {
@@ -75,7 +72,7 @@
 }
 
 .header__theme-menu {
-  margin-bottom: 274.5px;
+  margin-bottom: 273px;
 }
 
 .header-title {
