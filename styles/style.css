@@ -1,5 +1,318 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.link {
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.all-sections:not(:last-of-type) {
+  margin-bottom: 80px;
+}
+
+.header, .can-section {
+  margin-bottom: 60px;
+}
+
+.header {
+  display: grid;
+  position: relative;
+  padding: 20px;
+  grid-template-rows: 1fr min-content 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+.decorated-zone::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  inset-inline-start: 20px;
+  inset-block-end: 20px;
+}
+
+.decorated-zone::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 1.5px 13px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header__theme-menu {
+  margin-bottom: 274.5px;
+}
+
+.header-title {
+  font-family: var(--main-font, regular);
+  text-shadow: #FF0070 4px 4px;
+  font-weight: 700;
+  line-height: 83%;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  margin-bottom: 114px;
+  margin-left: -20px;
+}
+
+.header-info {
+  font-family: var(--main-font, regular);
+  align-self: center;
+  justify-self: end;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  max-width: 50%;
+  margin-bottom: 134px;
+}
+
+.all-sections {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.pochemu-section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(236px, 1fr) minmax(355px, 40.5rem);
+  grid-template-rows: 1fr 1fr;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pochemu-section-dofamin {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.cards-title {
+  font-family: var(--main-font, regular);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.cards-text {
+  font-family: var(--main-font, regular);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.section-title {
+  font-family: var(--main-font, regular);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.chto-section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-flow: row;
+}
+
+.chto-section-mnogoz {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.chto-section-eda {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.chto-section-gad {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.kak-section {
+  display: flex;
+  gap: 20px;
+}
+
+.kak-section-title {
+  min-width: 236px;
+}
+
+.kak-double-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 649px;
+}
+
+.cards-title-variant {
+  font-family: var(--main-font);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.can-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards-section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content-picture {
+  width: 100%;
+  height: 100%;
+}
+
+.sun-picture {
+  grid-column: span 2;
+}
+
+.eat-picture {
+  grid-row: span 2;
+  object-fit: cover;
+}
+
+.disk-picture {
+  grid-row: span 2;
+  object-fit: cover;
+}
+
+.street-picture {
+  grid-column: span 2;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+}
+
+.footer-title {
+  font-family: var(--main-font, regular);
+  font-weight: 700;
+  line-height: 83%;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
+
+@media (max-width: 768px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: end;
+    gap: 11.5px;
+  }
+  .header__theme-menu {
+    margin-top: 192px;
+    margin-bottom: 173px;
+  }
+  .header-title{
+    margin-bottom: 162px;
+  }
+  .header-info {
+    margin-bottom: 183px;
+  }
+  .chto-section {
+    grid-template-columns: auto;
+  }
+  .chto-section-title {
+    width: 236px;
+  }
+  .chto-all-sections {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+    align-items: end;
+    gap: 11.5px;
+  }
+  .header__theme-menu {
+    margin-top: 75px;
+    margin-bottom: 65px;
+  }
+  .header-title{
+    margin-bottom: 55px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+  .header-info {
+    margin-bottom: 66px;
+    max-width: 100%;
+  }
+  .pochemu-section {
+    grid-template-columns: minmax(355px, 40.5rem);
+    grid-template-rows: auto 1fr 1fr;
+  }
+  .pochemu-section-dofamin {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .all-sections {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .chto-section-title {
+    width: auto;
+  }
+  .kak-section {
+    flex-direction: column;
+  }
+  .cards-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .all-sections:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+  .header, .can-section {
+    margin-bottom: 40px;
+  }
 }
