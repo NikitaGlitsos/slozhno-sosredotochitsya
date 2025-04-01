@@ -1,4 +1,5 @@
-.theme_dark {
+.page.theme_dark {
+  background-image: url(../images/cover-image-dark.png);
   --text-color: #F1B2CE;
   --decor-text-color: #000028;
   --title-color: #FF0070;
@@ -10,25 +11,3 @@
   --main-color: #000028;
   --rec: #FF0070;
 }
-
-.page.theme_dark {
-  background-image: url(../images/cover-image-dark.png);
-  background-color: var(--main-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-  background-color: var(--main-color);
-  }
-  .theme_dark {
-    --text-color: #F1B2CE;
-    --decor-text-color: #000028;
-    --title-color: #FF0070;
-    --title-decor: #FF0070;
-    --decor-zone-color: #FF0070;
-    --button-color: #FF0070;
-    --button-color-hover: rgb(255,0,7,40%);
-    --main-title-color: #DB00FF;
-    --main-color: #000028;
-  }
-} 

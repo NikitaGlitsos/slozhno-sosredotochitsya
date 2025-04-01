@@ -8,30 +8,6 @@
     border-top: 1px solid var(--decor-zone-color);
 } 
 
-.rec {
-    position: absolute;
-    font-family: var(--main-font);
-    color: var(--rec);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    inset-block-start: 20px;
-    inset-inline-end: 49px;
-}
-
-.rec::after {
-    display: block;
-    position: absolute;
-    content: "";
-    inline-size: 9px;
-    block-size: 9px;
-    border-radius: 50%;
-    box-shadow: 0 0 4px 2px;
-    background-color: var(--rec);
-    inset-inline-end: -20px;
-    inset-block-start: 8px;
-}
-
 .header-title {
     color: var(--main-title-color);
 }

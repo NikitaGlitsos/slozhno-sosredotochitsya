@@ -1,9 +1,14 @@
-.page {
+.page{
+  background-color: var(--main-color);
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.ili {
+  word-spacing: 7px;
 }
 
 .link {
@@ -26,6 +31,31 @@
   grid-template-rows: 1fr min-content 1fr;
   width: 100%;
   height: 100vh;
+  min-height: 668px;
+}
+
+.rec {
+  position: absolute;
+  font-family: var(--main-font);
+  color: var(--rec);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  inset-block-start: 20px;
+  inset-inline-end: 49px;
+}
+
+.rec::after {
+  display: block;
+  position: absolute;
+  content: "";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px;
+  background-color: var(--rec);
+  inset-inline-end: -20px;
+  inset-block-start: 8px;
 }
 
 .decorated-zone::after {
@@ -53,7 +83,7 @@
 .header__theme-menu-list {
   display: flex;
   list-style: none;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
 }
 
@@ -71,17 +101,12 @@
   pointer-events: none;
 }
 
-.header__theme-menu {
-  margin-bottom: 273px;
-}
-
 .header-title {
   font-family: var(--main-font, regular);
   text-shadow: #FF0070 4px 4px;
   font-weight: 700;
   line-height: 83%;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  margin-bottom: 114px;
   margin-left: -20px;
 }
 
@@ -93,7 +118,6 @@
   font-size: 18px;
   line-height: 23.4px;
   max-width: 50%;
-  margin-bottom: 134px;
 }
 
 .all-sections {
@@ -101,22 +125,21 @@
   padding-right: 20px;
 }
 
-.pochemu-section {
+.why-section {
   display: grid;
   gap: 20px;
-  grid-template-columns: minmax(236px, 1fr) minmax(355px, 40.5rem);
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 0.97fr 2fr;
 }
 
-.card {
+.double-why-section {
+  display: grid;
+  gap: 20px;
+}
+
+.card-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.pochemu-section-dofamin {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
 }
 
 .cards-title {
@@ -140,43 +163,32 @@
   line-height: 23.4px;
 }
 
-.chto-section {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: row;
-}
-
-.chto-section-mnogoz {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-
-.chto-section-eda {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.chto-section-gad {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-.kak-section {
-  display: flex;
-  gap: 20px;
-}
-
-.kak-section-title {
-  min-width: 236px;
-}
-
-.kak-double-section {
+.what-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 649px;
+}
+
+.what-section-title {
+  max-width: 315px;
+}
+
+.double-what-section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+}
+
+.how-section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 0.97fr 2fr;
+}
+
+.how-double-section {
+  display: grid;
+  gap: 20px;
 }
 
 .cards-title-variant {
@@ -239,68 +251,73 @@
 }
 
 @media (max-width: 768px) {
+  .ili {
+    word-spacing: 210px;
+  }
   .header__theme-menu-list {
     flex-direction: column;
     align-items: end;
     gap: 11.5px;
   }
+  .why-section {
+    grid-template-columns: 1fr 2fr;
+  }
+  .how-section {
+    grid-template-columns: 1fr 2fr;
+  }
   .header__theme-menu {
-    margin-top: 192px;
-    margin-bottom: 173px;
+    align-self: center;
   }
-  .header-title{
-    margin-bottom: 162px;
+  .double-what-section {
+    display: flex;
+    flex-direction: column;
   }
-  .header-info {
-    margin-bottom: 183px;
-  }
-  .chto-section {
-    grid-template-columns: auto;
-  }
-  .chto-section-title {
+  .what-section-title {
     width: 236px;
   }
-  .chto-all-sections {
+  .what-all-sections {
     grid-column: auto;
     grid-row: auto;
   }
 }
 
 @media (max-width: 375px) {
+  .rec {
+    inset-block-start: 10px;
+    inset-inline-end: 39px;
+}
+  .decorated-zone::after {
+    inset-inline-start: 10px;
+    inset-block-end: 10px;
+  }
+  .decorated-zone::before {
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
+  }
+  .header {
+    padding: 10px;
+  }
   .header__theme-menu-list {
     flex-direction: column;
     align-items: end;
     gap: 11.5px;
   }
-  .header__theme-menu {
-    margin-top: 75px;
-    margin-bottom: 65px;
-  }
   .header-title{
-    margin-bottom: 55px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-left: 0;
   }
   .header-info {
-    margin-bottom: 66px;
     max-width: 100%;
   }
-  .pochemu-section {
-    grid-template-columns: minmax(355px, 40.5rem);
-    grid-template-rows: auto 1fr 1fr;
-  }
-  .pochemu-section-dofamin {
-    grid-column: auto;
-    grid-row: auto;
+  .why-section {
+    grid-template-columns: 1fr;
   }
   .all-sections {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .chto-section-title {
-    width: auto;
-  }
-  .kak-section {
-    flex-direction: column;
+  .how-section {
+    grid-template-columns: 1fr;
   }
   .cards-section {
     display: flex;
@@ -311,5 +328,11 @@
   }
   .header, .can-section {
     margin-bottom: 40px;
+  }
+  .can-section, .cards-section {
+    gap: 10px;
+  }
+  .footer {
+    padding: 10px;
   }
 }

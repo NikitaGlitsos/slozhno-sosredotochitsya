@@ -1,4 +1,6 @@
-.theme_light {
+.page.theme_light {
+  background-image: url(../images/cover-image-light.png);
+  background-color: var(--main-color);
   --text-color: #353430;  
   --decor-text-color: #353430;
   --title-color: #353430;
@@ -11,24 +13,20 @@
   --rec: transparent;
 }
 
-.page.theme_light {
-  background-image: url(../images/cover-image-light.png);
-  background-color: var(--main-color);
-}
-
 @media (prefers-color-scheme: light) {
   .page {
-  background-color: var(--main-color);
+  background-image: url(../images/cover-image-light.png);
   }
-  .theme_light {
-    --text-color: #353430;  
-    --decor-text-color: #353430;
-    --title-color: #353430;
-    --title-decor: #FF8DCB;
-    --decor-zone-color: #353430;
-    --button-color: #353430;
-    --button-color-hover: rgb(53,52,48,40%);
-    --main-title-color: #FFC2E6;
-    --main-color: #FFF1F7;
+  :root {
+  --text-color: #353430;  
+  --decor-text-color: #353430;
+  --title-color: #353430;
+  --title-decor: #FF8DCB;
+  --decor-zone-color: #353430;
+  --button-color: #353430;
+  --button-color-hover: rgb(53,52,48,40%);
+  --main-title-color: #FFC2E6;
+  --main-color: #FFF1F7;
+  --rec: transparent;
   }
 } 
