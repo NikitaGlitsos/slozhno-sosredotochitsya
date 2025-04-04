@@ -52,12 +52,12 @@
 }
 
 .link:hover {
-    outline: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
     cursor: pointer;
 }
 
 .link:focus-visible {
-    border: 1px solid var(--text-color);
+    outline: 1px solid var(--text-color);
 }
 
 .cards-title-variant {

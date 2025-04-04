@@ -7,7 +7,7 @@
   background-attachment: fixed;
 }
 
-.ili {
+.space {
   word-spacing: 7px;
 }
 
@@ -89,7 +89,7 @@
 
 .header__theme-menu-button {
   border: none;
-  padding: 1.5px 13px;
+  padding: 1.5px 13px 4px;
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 18px;
@@ -125,7 +125,7 @@
   padding-right: 20px;
 }
 
-.why-section {
+.why-how-section {
   display: grid;
   gap: 20px;
   grid-template-columns: 0.97fr 2fr;
@@ -178,12 +178,6 @@
   gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-flow: row;
-}
-
-.how-section {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 0.97fr 2fr;
 }
 
 .how-double-section {
@@ -241,6 +235,7 @@
   padding: 20px;
   width: 100%;
   height: 100vh;
+  min-height: 668px;
 }
 
 .footer-title {
@@ -251,7 +246,7 @@
 }
 
 @media (max-width: 768px) {
-  .ili {
+  .space {
     word-spacing: 210px;
   }
   .header__theme-menu-list {
@@ -259,10 +254,7 @@
     align-items: end;
     gap: 11.5px;
   }
-  .why-section {
-    grid-template-columns: 1fr 2fr;
-  }
-  .how-section {
+  .why-how-section {
     grid-template-columns: 1fr 2fr;
   }
   .header__theme-menu {
@@ -309,15 +301,12 @@
   .header-info {
     max-width: 100%;
   }
-  .why-section {
+  .why-how-section {
     grid-template-columns: 1fr;
   }
   .all-sections {
     padding-left: 10px;
     padding-right: 10px;
-  }
-  .how-section {
-    grid-template-columns: 1fr;
   }
   .cards-section {
     display: flex;
